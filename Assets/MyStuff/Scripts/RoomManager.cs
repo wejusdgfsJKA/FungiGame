@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
+    public static RoomManager Instance { get; protected set; }
     [SerializeField] protected GameObject[] rooms;
-    public RoomManager Instance { get; protected set; }
     private void Awake()
     {
         if (Instance == null)
@@ -13,15 +13,15 @@ public class RoomManager : MonoBehaviour
     }
     public void LoadRoom1()
     {
-        rooms[0].SetActive(true);
         rooms[1].SetActive(false);
         rooms[2].SetActive(false);
+        rooms[0].SetActive(true);
     }
     public void LoadRoom2()
     {
         rooms[0].SetActive(false);
-        rooms[1].SetActive(true);
         rooms[2].SetActive(false);
+        rooms[1].SetActive(true);
     }
     public void LoadRoom3()
     {
