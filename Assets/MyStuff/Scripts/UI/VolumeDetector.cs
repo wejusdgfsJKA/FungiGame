@@ -1,13 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VolumeDetector : MonoBehaviour
 {
-    public AudioSource audioSource;
+    [SerializeField] protected UnityEvent OnEnter;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "FungiHolder")
-        {
-            audioSource.Play();
-        }
+
     }
 }
