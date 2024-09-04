@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GreenFungi
   m_EditorClassIdentifier: Assembly-CSharp::FungiData
   <Beneficial>k__BackingField: 1
-  <Speed>k__BackingField: 1
+  <Speed>k__BackingField: 5
   <Score>k__BackingField: 1
   <Weight>k__BackingField: 1
   <FungiMaterial>k__BackingField: {fileID: 2100000, guid: fe66d3e8deebe6f4ba0c8765da019f61,

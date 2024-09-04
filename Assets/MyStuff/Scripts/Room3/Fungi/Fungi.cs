@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/FungiData")]
 public class FungiData : ScriptableObject
@@ -19,30 +18,16 @@ public class Fungi : MonoBehaviour
 {
     protected FungiData fungiData;
     protected MeshRenderer meshRenderer;
-    protected Coroutine coroutine;
-    protected WaitForSeconds wait;
-    [SerializeField] protected float moveFrequency = .01f;
+    protected Rigidbody rb;
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        wait = new WaitForSeconds(moveFrequency);
-    }
-    private void OnEnable()
-    {
-        //begin moving forward
-        coroutine = StartCoroutine(MoveForward());
-    }
-    IEnumerator MoveForward()
-    {
-        while (true)
-        {
-            yield return wait;
-            transform.Translate(-transform.forward * fungiData.Speed);
-        }
+        rb = GetComponent<Rigidbody>();
     }
     public void Init(FungiData data)
     {
         fungiData = data;
+        rb.velocity = transform.forward * fungiData.Speed;
         meshRenderer.material = data.FungiMaterial;
     }
     protected void OnCollisionEnter(Collision collision)
@@ -57,12 +42,5 @@ public class Fungi : MonoBehaviour
     {
         gameObject.SetActive(false);
         FungiManager.Instance.HasDied(this);
-    }
-    private void OnDisable()
-    {
-        if (coroutine != null)
-        {
-            StopCoroutine(coroutine);
-        }
     }
 }

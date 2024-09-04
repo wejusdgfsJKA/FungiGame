@@ -382,6 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1514668482659286071, guid: 5f2e864be7e13f04bae4035e2dbe6a93, type: 3}
+    - {fileID: 1833304584746252166, guid: 5f2e864be7e13f04bae4035e2dbe6a93, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6837560157474427870, guid: 5f2e864be7e13f04bae4035e2dbe6a93,
@@ -501,6 +502,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 274027507}
+    - targetCorrespondingSourceObject: {fileID: 2017401444009060560, guid: 5f2e864be7e13f04bae4035e2dbe6a93,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1072898276}
     - targetCorrespondingSourceObject: {fileID: 7863825006610165724, guid: 5f2e864be7e13f04bae4035e2dbe6a93,
         type: 3}
       insertIndex: -1
@@ -555,7 +560,31 @@ MonoBehaviour:
   roster:
   - {fileID: 11400000, guid: 6727d53fdff45024cb0a88044f9401d4, type: 2}
   - {fileID: 11400000, guid: 0842690ae84a4a944a3fa5aec3b3aaf4, type: 2}
-  spawnFrequency: 5
+  spawnFrequency: 2
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0033340454
+      value: 0
+      inSlope: 21.915655
+      outSlope: 21.915655
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.013333341
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 4.184555
+      outSlope: 4.184555
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.026666619
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &380125068
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +981,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 274027506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1072898271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2017401444009060560, guid: 5f2e864be7e13f04bae4035e2dbe6a93,
+    type: 3}
+  m_PrefabInstance: {fileID: 274027504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1072898276
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072898271}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 1.9943063, z: 10.000002}
+  m_Center: {x: 0, y: -1.0028474, z: -0.00000047819486}
 --- !u!1 &1130566721
 GameObject:
   m_ObjectHideFlags: 0

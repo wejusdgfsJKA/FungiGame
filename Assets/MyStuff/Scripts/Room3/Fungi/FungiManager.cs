@@ -7,7 +7,8 @@ public class FungiManager : MonoBehaviour
     public static FungiManager Instance { get; private set; }
     [SerializeField] protected Fungi baseFungiPrefab;
     [SerializeField] protected FungiData[] roster;
-    [SerializeField] protected float spawnFrequency = 5;
+    [SerializeField] protected float spawnFrequency = 2;
+    [SerializeField] protected AnimationCurve curve;
     protected WaitForSeconds wait;
     protected Coroutine coroutine;
     protected Queue<Fungi> pool = new();
@@ -28,12 +29,15 @@ public class FungiManager : MonoBehaviour
     {
         while (true)
         {
+            yield return wait;
             for (int i = 0; i < transform.childCount; i++)
             {
-                int j = Random.Range(0, roster.Length);
-                Spawn(i, roster[j]);
+                int j = (roster.Length + 2) * (int)curve.Evaluate(Random.value);
+                if (j < roster.Length)
+                {
+                    Spawn(i, roster[j]);
+                }
             }
-            yield return wait;
         }
     }
     protected void Spawn(int point, FungiData fungidata)
@@ -47,7 +51,8 @@ public class FungiManager : MonoBehaviour
         }
         else
         {
-            entity = Instantiate(baseFungiPrefab, transform.GetChild(point).position, transform.GetChild(point).rotation);
+            entity = Instantiate(baseFungiPrefab, transform.GetChild(point).position,
+                transform.GetChild(point).rotation);
         }
         entity.Init(fungidata);
     }
