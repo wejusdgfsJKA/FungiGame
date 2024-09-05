@@ -32,7 +32,7 @@ public class FungiManager : MonoBehaviour
             yield return wait;
             for (int i = 0; i < transform.childCount; i++)
             {
-                int j = (roster.Length + 2) * (int)curve.Evaluate(Random.value);
+                int j = (roster.Length + 1) * (int)curve.Evaluate(Random.value);
                 if (j < roster.Length)
                 {
                     Spawn(i, roster[j]);
