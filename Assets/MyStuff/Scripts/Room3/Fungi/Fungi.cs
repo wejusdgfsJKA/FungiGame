@@ -32,7 +32,7 @@ public class Fungi : MonoBehaviour
     }
     protected void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.transform.root.gameObject.tag == "Player")
+        if (collision.collider.transform.gameObject.tag == "Player")
         {
             PlayerScoreManager.Instance.Contact(fungiData);
         }
