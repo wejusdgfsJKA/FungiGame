@@ -1,0 +1,205 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.4.0)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_specular",
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 8338,
+            "type": "VEC3",
+            "max": [
+                3.554565191268921,
+                15.391250610351563,
+                3.490567684173584
+            ],
+            "min": [
+                -3.7722113132476807,
+                0.04175424575805664,
+                -6.6741557121276855
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 8338,
+            "type": "VEC3",
+            "max": [
+                0.9989955425262451,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.998995304107666,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 8338,
+            "type": "VEC2",
+            "max": [
+                8.3225679397583,
+                4.295764923095703
+            ],
+            "min": [
+                -6.322567939758301,
+                -22.447969436645508
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 12138,
+            "type": "SCALAR",
+            "max": [
+                8337
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 315368,
+            "uri": "Microscope N180608.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 100056,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 100056,
+            "byteLength": 100056,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 200112,
+            "byteLength": 66704,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 266816,
+            "byteLength": 48552,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "Material",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.7529412508010864,
+                    0.7529412508010864,
+                    0.7529412508010864,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.8935180306434631
+            },
+            "extensions": {
+                "KHR_materials_specular": {
+                    "specularFactor": 1.0,
+                    "specularColorFactor": [
+                        0.7529412508010864,
+                        0.7529412508010864,
+                        0.7529412508010864
+                    ]
+                }
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "0",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 3,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "<3DSRoot>",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "Layer_dia-",
+            "matrix": [
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                5.9604645663569045e-9,
+                0.09999999403953552,
+                0.0,
+                0.0,
+                -0.09999999403953552,
+                5.9604645663569045e-9,
+                0.0,
+                0.010882305912673473,
+                -0.15917937457561493,
+                -0.7716502547264099,
+                1.0
+            ],
+            "mesh": 0
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}

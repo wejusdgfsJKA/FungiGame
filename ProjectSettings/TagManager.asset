@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - FungiHolder
+  - Lens1
+  - Mic1
+  - Mic2
+  - Lens2
   layers:
   - Default
   - TransparentFX
