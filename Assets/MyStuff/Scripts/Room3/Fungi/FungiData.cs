@@ -1,6 +1,6 @@
 using UnityEngine;
-[CreateAssetMenu(menuName = "ScriptableObjects/FungiData")]
-public class FungiData : ScriptableObject
+[System.Serializable]
+public class FungiData
 {
     [field: SerializeField]
     public bool Beneficial { get; protected set; }

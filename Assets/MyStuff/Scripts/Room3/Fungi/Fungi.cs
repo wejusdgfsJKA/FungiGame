@@ -8,7 +8,7 @@ public class Fungi : MonoBehaviour
     {
         fungiData = data;
         rb.WakeUp();
-        rb.velocity = transform.forward * fungiData.Speed;
+        rb.AddForce(transform.forward * data.Speed, ForceMode.Impulse);
         meshRenderer.material = data.FungiMaterial;
     }
     protected void OnCollisionEnter(Collision collision)
