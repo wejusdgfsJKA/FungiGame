@@ -6,6 +6,7 @@ public class PropManager : MonoBehaviour
     [SerializeField] protected PropData microscope2;
     [SerializeField] protected PropData microscope2Lens;
     [SerializeField] protected PropData[] fungiHolders;
+    [SerializeField] protected GameObject mic2Slot;
     protected bool spawnedMic1, spawnedMic2;
     protected bool spawnedFungi;
     private void OnEnable()
@@ -42,8 +43,9 @@ public class PropManager : MonoBehaviour
         if (!spawnedMic2 && spawnedMic1)
         {
             spawnedMic2 = true;
-            //SpawnProp(microscope2);
-            //SpawnProp(microscope2Lens);
+            mic2Slot.SetActive(true);
+            SpawnProp(microscope2);
+            SpawnProp(microscope2Lens);
         }
     }
     protected void SpawnProp(PropData prop)

@@ -24,6 +24,7 @@ public class MicroscopeHolder : MonoBehaviour
                         rb.useGravity = false;
                         collider.enabled = false;
                         collider.transform.GetComponent<MeshRenderer>().enabled = false;
+                        transform.GetComponent<MeshRenderer>().enabled = false;
                         button.SetActive(true);
                     }
                 }
