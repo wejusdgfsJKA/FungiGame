@@ -5,6 +5,7 @@ public class PlayerScoreManager : MonoBehaviour
 {
     public static PlayerScoreManager Instance { get; protected set; }
     protected int playerScore;
+    [SerializeField] protected GameObject victoryScreen;
     public int PlayerScore
     {
         get
@@ -15,9 +16,10 @@ public class PlayerScoreManager : MonoBehaviour
         {
             if (playerScore != value)
             {
-                if (value >= victoryScore)
+                if (value >= VictoryScore)
                 {
                     //victory
+                    victoryScreen.SetActive(true);
                     RoomManager.Instance.LoadRoom1();
                     return;
                 }
@@ -34,15 +36,18 @@ public class PlayerScoreManager : MonoBehaviour
     }
     [SerializeField]
     protected int initialScore;
-    [SerializeField]
-    protected int victoryScore;
+    [field: SerializeField]
+    public int VictoryScore { get; protected set; }
     [SerializeField] protected TextMeshProUGUI scoreText;
+    [SerializeField] protected AudioClip goodClip, badClip;
+    protected AudioSource audioSource;
     protected void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
+        audioSource = GetComponent<AudioSource>();
     }
     private void OnEnable()
     {
@@ -57,10 +62,12 @@ public class PlayerScoreManager : MonoBehaviour
         //a fungi has made contact with the player
         if (fungi.Beneficial)
         {
+            audioSource.PlayOneShot(goodClip);
             PlayerScore += fungi.Score;
         }
         else
         {
+            audioSource.PlayOneShot(badClip);
             PlayerScore -= fungi.Score;
         }
     }

@@ -7,7 +7,12 @@ public class MicroscopeHolder : MonoBehaviour
     [SerializeField] protected int micNumber;
     [SerializeField] protected GameObject button;
     [SerializeField] protected Transform micPoint, lensPoint;
+    protected AudioSource audioSource;
     protected bool mic = false, micLens = false;
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void InsertedObject(Collider collider)
     {
         if (mic)
@@ -18,12 +23,8 @@ public class MicroscopeHolder : MonoBehaviour
                 {
                     if (button.activeSelf == false)
                     {
-                        collider.transform.GetComponent<XRGrabInteractable>().enabled = false;
-                        var rb = collider.transform.GetComponent<Rigidbody>();
-                        rb.isKinematic = true;
-                        rb.useGravity = false;
-                        collider.enabled = false;
-                        collider.transform.GetComponent<MeshRenderer>().enabled = false;
+                        audioSource.Play();
+                        collider.transform.gameObject.SetActive(false);
                         transform.GetComponent<MeshRenderer>().enabled = false;
                         button.SetActive(true);
                     }
@@ -34,6 +35,7 @@ public class MicroscopeHolder : MonoBehaviour
                 //we need the lens
                 if (collider.gameObject.tag == "Lens" + micNumber.ToString())
                 {
+                    audioSource.Play();
                     micLens = true;
                     collider.transform.GetComponent<XRGrabInteractable>().enabled = false;
                     var rb = collider.transform.GetComponent<Rigidbody>();
@@ -50,6 +52,7 @@ public class MicroscopeHolder : MonoBehaviour
         {
             if (collider.gameObject.tag == "Mic" + micNumber.ToString())
             {
+                audioSource.Play();
                 mic = true;
                 collider.transform.GetComponent<XRGrabInteractable>().enabled = false;
                 var rb = collider.transform.GetComponent<Rigidbody>();
