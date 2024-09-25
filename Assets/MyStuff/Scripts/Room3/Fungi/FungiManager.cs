@@ -11,6 +11,7 @@ public class FungiManager : MonoBehaviour
     [SerializeField] protected float minSpawnFrequency = 1, maxSpawnFrequency = 5;
     protected Coroutine coroutine;
     protected Queue<Fungi> pool = new();
+    protected HashSet<Fungi> active = new();
     private void Awake()
     {
         if (Instance == null)
@@ -22,6 +23,7 @@ public class FungiManager : MonoBehaviour
     {
         //start spawning
         coroutine = StartCoroutine(SpawnFungi());
+        active.Clear();
     }
     protected IEnumerator SpawnFungi()
     {
@@ -56,10 +58,12 @@ public class FungiManager : MonoBehaviour
                 Random.value, 0), transform.GetChild(point).rotation);
         }
         entity.Init(fungidata);
+        active.Add(entity);
     }
     public void HasDied(Fungi fungi)
     {
         pool.Enqueue(fungi);
+        active.Remove(fungi);
     }
     private void OnDisable()
     {
@@ -67,6 +71,15 @@ public class FungiManager : MonoBehaviour
         if (coroutine != null)
         {
             StopCoroutine(coroutine);
+        }
+        Queue<Fungi> queue = new Queue<Fungi>();
+        foreach (Fungi fungi in active)
+        {
+            queue.Enqueue(fungi);
+        }
+        while (queue.Count > 0)
+        {
+            queue.Dequeue().gameObject.SetActive(false);
         }
     }
 }

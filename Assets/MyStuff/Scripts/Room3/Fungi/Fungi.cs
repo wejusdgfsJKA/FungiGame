@@ -17,11 +17,10 @@ public class Fungi : MonoBehaviour
         {
             PlayerScoreManager.Instance.Contact(fungiData);
         }
-        Die();
-    }
-    protected void Die()
-    {
         gameObject.SetActive(false);
+    }
+    private void OnDisable()
+    {
         FungiManager.Instance.HasDied(this);
     }
 }

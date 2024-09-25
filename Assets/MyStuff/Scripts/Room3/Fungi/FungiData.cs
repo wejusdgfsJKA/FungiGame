@@ -10,7 +10,5 @@ public class FungiData
     [field: SerializeField]
     public int Score { get; protected set; }
     [field: SerializeField]
-    public float Weight { get; protected set; }
-    [field: SerializeField]
     public Material FungiMaterial { get; protected set; }
 }
