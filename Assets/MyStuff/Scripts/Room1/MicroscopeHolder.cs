@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class MicroscopeHolder : MonoBehaviour
 {
@@ -37,7 +37,7 @@ public class MicroscopeHolder : MonoBehaviour
                 {
                     audioSource.Play();
                     micLens = true;
-                    collider.transform.GetComponent<XRGrabInteractable>().enabled = false;
+                    collider.transform.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false;
                     var rb = collider.transform.GetComponent<Rigidbody>();
                     rb.isKinematic = true;
                     rb.useGravity = false;
@@ -54,7 +54,7 @@ public class MicroscopeHolder : MonoBehaviour
             {
                 audioSource.Play();
                 mic = true;
-                collider.transform.GetComponent<XRGrabInteractable>().enabled = false;
+                collider.transform.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false;
                 var rb = collider.transform.GetComponent<Rigidbody>();
                 rb.isKinematic = true;
                 rb.useGravity = false;
