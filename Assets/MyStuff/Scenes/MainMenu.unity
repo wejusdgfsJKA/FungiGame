@@ -152,23 +152,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4530874333597806006, guid: 0757bd75506eaf84abc9b23426f6686f,
         type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 4530874333597806006, guid: 0757bd75506eaf84abc9b23426f6686f,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4530874333597806006, guid: 0757bd75506eaf84abc9b23426f6686f,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4530874333597806006, guid: 0757bd75506eaf84abc9b23426f6686f,
-        type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
+      propertyPath: m_fontSize
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 4772694041336791251, guid: 0757bd75506eaf84abc9b23426f6686f,
         type: 3}
@@ -183,17 +168,17 @@ PrefabInstance:
     - target: {fileID: 4772694041336791251, guid: 0757bd75506eaf84abc9b23426f6686f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4772694041336791251, guid: 0757bd75506eaf84abc9b23426f6686f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4772694041336791251, guid: 0757bd75506eaf84abc9b23426f6686f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4772694041336791251, guid: 0757bd75506eaf84abc9b23426f6686f,
         type: 3}
@@ -355,10 +340,13 @@ PrefabInstance:
       propertyPath: m_Text
       value: Start game
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4772694042291381674, guid: 0757bd75506eaf84abc9b23426f6686f, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 4772694041336791248, guid: 0757bd75506eaf84abc9b23426f6686f, type: 3}
+    - target: {fileID: 4772694041336791248, guid: 0757bd75506eaf84abc9b23426f6686f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0757bd75506eaf84abc9b23426f6686f, type: 3}

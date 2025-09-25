@@ -1279,6 +1279,103 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &794855592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4047690309795755189, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 5229411626710107851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &794855595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4047690309795755191, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 5229411626710107851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794855592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &794855600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794855592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcd69a08cd8efbae9e823674f31b0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FungiGame.Room1.ButtonToVRConverter
+  autoConvert: 1
+  vrButtonOffset: {x: 0, y: 0.2, z: 0.1}
+  vrButtonScale: 1
+  hideOriginalButton: 1
+  normalColor:
+    r: 0.2
+    g: 0.6
+    b: 1
+    a: 0.8
+  hoverColor:
+    r: 0.3
+    g: 0.7
+    b: 1
+    a: 0.9
+  pressedColor:
+    r: 0.1
+    g: 0.5
+    b: 0.8
+    a: 1
+  originalButton: {fileID: 0}
+  vrButton: {fileID: 0}
+  originalText: {fileID: 0}
+  isConverted: 0
+--- !u!114 &794855601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794855592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 794855595}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &797741044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,12 +1864,36 @@ MonoBehaviour:
   panelPadding: 30
   defaultButtonSize: {x: 300, y: 80}
   currentTheme:
-    backgroundColor: {r: 0.1, g: 0.1, b: 0.1, a: 0.8}
-    primaryColor: {r: 0.2, g: 0.4, b: 0.8, a: 1}
-    secondaryColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
-    accentColor: {r: 0.8, g: 0.4, b: 0.2, a: 1}
-    textColor: {r: 1, g: 1, b: 1, a: 1}
-    textSecondaryColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    backgroundColor:
+      r: 0.1
+      g: 0.1
+      b: 0.1
+      a: 0.8
+    primaryColor:
+      r: 0.2
+      g: 0.4
+      b: 0.8
+      a: 1
+    secondaryColor:
+      r: 0.3
+      g: 0.3
+      b: 0.3
+      a: 1
+    accentColor:
+      r: 0.8
+      g: 0.4
+      b: 0.2
+      a: 1
+    textColor:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+    textSecondaryColor:
+      r: 0.8
+      g: 0.8
+      b: 0.8
+      a: 1
     primaryFont: {fileID: 0}
     headingFontSize: 24
     bodyFontSize: 18
@@ -1783,10 +1904,8 @@ MonoBehaviour:
   enablePanelAnimations: 1
   panelFadeInDuration: 0.5
   panelAnimationCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
@@ -1794,8 +1913,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -1809,6 +1927,50 @@ MonoBehaviour:
   uiAudioSource: {fileID: 0}
   panelOpenSound: {fileID: 0}
   panelCloseSound: {fileID: 0}
+  managedButtons: []
+  managedTexts: []
+  playerCamera: {fileID: 0}
+--- !u!1 &1368218522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 475112216312964289, guid: 890dfc80e8a049549b0d8b216d6be9fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1876017192840796983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1368218529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368218522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcd69a08cd8efbae9e823674f31b0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FungiGame.Room1.ButtonToVRConverter
+  autoConvert: 1
+  vrButtonOffset: {x: 0, y: 0.2, z: 0.1}
+  vrButtonScale: 1
+  hideOriginalButton: 1
+  normalColor:
+    r: 0.2
+    g: 0.6
+    b: 1
+    a: 0.8
+  hoverColor:
+    r: 0.3
+    g: 0.7
+    b: 1
+    a: 0.9
+  pressedColor:
+    r: 0.1
+    g: 0.5
+    b: 0.8
+    a: 1
+  originalButton: {fileID: 0}
+  vrButton: {fileID: 0}
+  originalText: {fileID: 0}
+  isConverted: 0
 --- !u!1001 &1383019277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2289,6 +2451,103 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1248136566}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2080082502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6101107797338946195, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 5229411626710107851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2080082506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6101107797338946193, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 5229411626710107851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080082502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2080082510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080082502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfcd69a08cd8efbae9e823674f31b0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FungiGame.Room1.ButtonToVRConverter
+  autoConvert: 1
+  vrButtonOffset: {x: 0, y: 0.2, z: 0.1}
+  vrButtonScale: 1
+  hideOriginalButton: 1
+  normalColor:
+    r: 0.2
+    g: 0.6
+    b: 1
+    a: 0.8
+  hoverColor:
+    r: 0.3
+    g: 0.7
+    b: 1
+    a: 0.9
+  pressedColor:
+    r: 0.1
+    g: 0.5
+    b: 0.8
+    a: 1
+  originalButton: {fileID: 0}
+  vrButton: {fileID: 0}
+  originalText: {fileID: 0}
+  isConverted: 0
+--- !u!114 &2080082511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080082502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2080082506}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1876017192840796983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2427,6 +2686,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 793629321}
+    - targetCorrespondingSourceObject: {fileID: 475112216312964289, guid: 890dfc80e8a049549b0d8b216d6be9fe,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1368218529}
   m_SourcePrefab: {fileID: 100100000, guid: 890dfc80e8a049549b0d8b216d6be9fe, type: 3}
 --- !u!1001 &5229411626710107851
 PrefabInstance:
@@ -2495,6 +2758,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AllowMSAA
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404179810603219184, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 2404179810603219184, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
         type: 3}
@@ -2571,6 +2839,31 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1e45148df410271849edd2c86cabd213, type: 2}
+    - target: {fileID: 3004474693282327553, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_ShowMaskGraphic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096624640150509472, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096624640150509472, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_FillCenter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096624640150509472, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096624640150509472, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3281888849874256156, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2621,6 +2914,47 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f2103e3cd2ab0133e80c170563fd3689, type: 2}
+    - target: {fileID: 5092940756953351105, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Text
+      value: Look
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092940756953351105, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092940756953351105, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 5092940756953351105, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092940756953351105, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092940756953351105, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352722305062134078, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522508423370131713, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5542497424487404338, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
         type: 3}
       propertyPath: m_ReceiveGI
@@ -2651,6 +2985,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1403491326}
+    - target: {fileID: 5742095679270108259, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5908785293690720484, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2664,7 +3003,37 @@ PrefabInstance:
     - target: {fileID: 6101107797338946195, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184873755013387120, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184873755013387120, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6184873755013387120, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184873755013387120, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184873755013387120, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184873755013387120, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 16.01
       objectReference: {fileID: 0}
     - target: {fileID: 6252210045277533569, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
         type: 3}
@@ -2676,6 +3045,36 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f101c7273003c41aca33ff895f01ffff, type: 2}
+    - target: {fileID: 6612272571154562660, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612272571154562660, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612272571154562660, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612272571154562660, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612272571154562660, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612272571154562660, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6612642933559481602, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -2705,6 +3104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680536205628541534, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5595119
       objectReference: {fileID: 0}
     - target: {fileID: 7817328855841756221, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
         type: 3}
@@ -2755,6 +3159,22 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1097344877}
+    - targetCorrespondingSourceObject: {fileID: 6101107797338946195, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2080082511}
+    - targetCorrespondingSourceObject: {fileID: 6101107797338946195, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2080082510}
+    - targetCorrespondingSourceObject: {fileID: 4047690309795755189, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794855601}
+    - targetCorrespondingSourceObject: {fileID: 4047690309795755189, guid: afcca5ca35d5c3e4badfa1e69939c0ea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794855600}
   m_SourcePrefab: {fileID: 100100000, guid: afcca5ca35d5c3e4badfa1e69939c0ea, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
