@@ -9,14 +9,36 @@ public class FungiManager : MonoBehaviour
     [SerializeField] protected FungiData[] roster;
     [SerializeField] protected float spawnPosVariation = 1;
     [SerializeField] protected float minSpawnFrequency = 1, maxSpawnFrequency = 5;
+
+    // Sinusoidal movement parameters
+    [SerializeField] protected float amplitude = 2f;
+    [SerializeField] protected float frequency = 1f;
+
+    // Randomness parameters
+    [SerializeField] protected float amplitudeVariation = 0.5f;
+    [SerializeField] protected float frequencyVariation = 0.3f;
+    [SerializeField] protected bool useRandomPhaseOffset = true;
     protected Coroutine coroutine;
-    protected Queue<Fungi> pool = new();
+    protected Dictionary<FungiData, Queue<Fungi>> typedPools = new();
     protected HashSet<Fungi> active = new();
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+        }
+        InitializePools();
+    }
+
+    private void InitializePools()
+    {
+        typedPools.Clear();
+        foreach (FungiData fungiType in roster)
+        {
+            if (!typedPools.ContainsKey(fungiType))
+            {
+                typedPools[fungiType] = new Queue<Fungi>();
+            }
         }
     }
     private void OnEnable()
@@ -44,6 +66,8 @@ public class FungiManager : MonoBehaviour
     protected void Spawn(int point, FungiData fungidata)
     {
         Fungi entity;
+        Queue<Fungi> pool = typedPools[fungidata];
+
         if (pool.Count > 0)
         {
             entity = pool.Dequeue();
@@ -57,12 +81,22 @@ public class FungiManager : MonoBehaviour
                 position + spawnPosVariation * new Vector3(Random.value,
                 Random.value, 0), transform.GetChild(point).rotation);
         }
+
+        // Apply randomness to movement parameters
+        float randomAmplitude = amplitude + Random.Range(-amplitudeVariation, amplitudeVariation);
+        float randomFrequency = frequency + Random.Range(-frequencyVariation, frequencyVariation);
+        float randomPhaseOffset = useRandomPhaseOffset ? Random.Range(0f, 2f * Mathf.PI) : 0f;
+
+        entity.SetMovementParameters(randomAmplitude, randomFrequency, randomPhaseOffset);
         entity.Init(fungidata);
         active.Add(entity);
     }
     public void HasDied(Fungi fungi)
     {
-        pool.Enqueue(fungi);
+        if (fungi.FungiData != null && typedPools.ContainsKey(fungi.FungiData))
+        {
+            typedPools[fungi.FungiData].Enqueue(fungi);
+        }
         active.Remove(fungi);
     }
     private void OnDisable()

@@ -10,5 +10,7 @@ public class FungiData
     [field: SerializeField]
     public int Score { get; protected set; }
     [field: SerializeField]
-    public Material FungiMaterial { get; protected set; }
+    public Color FungiColorBody { get; protected set; }
+    [field: SerializeField]
+    public Material FungiMaterialBalls { get; protected set; }
 }

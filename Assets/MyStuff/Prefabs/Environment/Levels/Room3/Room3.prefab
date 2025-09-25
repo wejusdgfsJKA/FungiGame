@@ -223,6 +223,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -833,15 +834,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1474,36 +1477,41 @@ MonoBehaviour:
   - <Beneficial>k__BackingField: 0
     <Speed>k__BackingField: 5
     <Score>k__BackingField: 1
-    <FungiMaterial>k__BackingField: {fileID: 2100000, guid: fe66d3e8deebe6f4ba0c8765da019f61,
-      type: 2}
+    <FungiColorBody>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <FungiMaterialBalls>k__BackingField: {fileID: 0}
   - <Beneficial>k__BackingField: 0
     <Speed>k__BackingField: 10
     <Score>k__BackingField: 2
-    <FungiMaterial>k__BackingField: {fileID: 2100000, guid: 6203719b7bb40e045a4c4ca1ae27387e,
-      type: 2}
+    <FungiColorBody>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <FungiMaterialBalls>k__BackingField: {fileID: 0}
   - <Beneficial>k__BackingField: 0
     <Speed>k__BackingField: 5
     <Score>k__BackingField: 1
-    <FungiMaterial>k__BackingField: {fileID: 2100000, guid: de80cd5dbf4b6da428c2f039278d3a5d,
-      type: 2}
+    <FungiColorBody>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <FungiMaterialBalls>k__BackingField: {fileID: 0}
   - <Beneficial>k__BackingField: 1
     <Speed>k__BackingField: 10
     <Score>k__BackingField: 2
-    <FungiMaterial>k__BackingField: {fileID: 2100000, guid: 6e5f211761cd28344a94ab7318c4464e,
-      type: 2}
+    <FungiColorBody>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <FungiMaterialBalls>k__BackingField: {fileID: 0}
   - <Beneficial>k__BackingField: 1
     <Speed>k__BackingField: 5
     <Score>k__BackingField: 1
-    <FungiMaterial>k__BackingField: {fileID: 2100000, guid: c54c07bbb23ced74d94d7189cb2a12a4,
-      type: 2}
+    <FungiColorBody>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <FungiMaterialBalls>k__BackingField: {fileID: 0}
   - <Beneficial>k__BackingField: 1
     <Speed>k__BackingField: 5
     <Score>k__BackingField: 1
-    <FungiMaterial>k__BackingField: {fileID: 2100000, guid: 117f2dfd41bc92d4cb3d9d181feee22e,
-      type: 2}
+    <FungiColorBody>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <FungiMaterialBalls>k__BackingField: {fileID: 0}
   spawnPosVariation: 1
   minSpawnFrequency: 0.5
   maxSpawnFrequency: 3
+  amplitude: 2
+  frequency: 1
+  amplitudeVariation: 0.5
+  frequencyVariation: 0.3
+  useRandomPhaseOffset: 1
 --- !u!1 &7886158892843713239
 GameObject:
   m_ObjectHideFlags: 0

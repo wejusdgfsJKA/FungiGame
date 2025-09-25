@@ -1,11 +1,16 @@
 using TMPro;
 using UnityEngine;
+using System.Text;
 
 public class PlayerScoreManager : MonoBehaviour
 {
     public static PlayerScoreManager Instance { get; protected set; }
     protected int playerScore;
     [SerializeField] protected GameObject victoryScreen;
+
+    // StringBuilder for efficient string operations
+    private static StringBuilder stringBuilder = new StringBuilder(32);
+    private const string SCORE_PREFIX = "Score: ";
     public int PlayerScore
     {
         get
@@ -29,7 +34,11 @@ public class PlayerScoreManager : MonoBehaviour
                     RoomManager.Instance.LoadRoom1();
                     return;
                 }
-                scoreText.text = "Score: " + value.ToString();
+                // Use StringBuilder to avoid string allocation garbage
+                stringBuilder.Clear();
+                stringBuilder.Append(SCORE_PREFIX);
+                stringBuilder.Append(value);
+                scoreText.text = stringBuilder.ToString();
                 playerScore = value;
             }
         }
