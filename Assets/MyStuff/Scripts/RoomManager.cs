@@ -142,7 +142,7 @@ public class RoomManager : MonoBehaviour
         rooms[2].SetActive(true);
 
         // Load colorful studio skybox for Room 3
-        SetSkyboxMaterial(colorfulStudioSkyboxMaterial, "Microscopic");
+        SetSkyboxMaterial(microscopicSkyboxMaterial, "Microscopic");
     }
 
     private void SetSkyboxMaterial(Material skyboxMaterial, string skyboxName)

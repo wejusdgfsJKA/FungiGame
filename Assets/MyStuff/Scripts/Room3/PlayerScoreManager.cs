@@ -11,6 +11,7 @@ public class PlayerScoreManager : MonoBehaviour
     // StringBuilder for efficient string operations
     private static StringBuilder stringBuilder = new StringBuilder(32);
     private const string SCORE_PREFIX = "Score: ";
+    private const string SCORE_SUFFIX = "/30";
     public int PlayerScore
     {
         get
@@ -38,6 +39,7 @@ public class PlayerScoreManager : MonoBehaviour
                 stringBuilder.Clear();
                 stringBuilder.Append(SCORE_PREFIX);
                 stringBuilder.Append(value);
+                stringBuilder.Append(SCORE_SUFFIX);
                 scoreText.text = stringBuilder.ToString();
                 playerScore = value;
             }
